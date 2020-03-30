@@ -4,6 +4,7 @@ const _ = require("lodash");
 const bodyParser = require("body-parser");
 const jwt = require("jsonwebtoken");
 
+
 const expressJwt = require('express-jwt');
 
 const users = [
@@ -74,9 +75,12 @@ app.route('/api/secret')
     res.json({ message: "Dit is niet te zien zonder token, en ik wil niet gefilmd worden" });
   })
 
+
+
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, function () {
   console.log("Express starting listening on port "+PORT)
   console.log("Express running")
 });
+
